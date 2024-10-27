@@ -116,9 +116,9 @@ Feel free to contribute by submitting issues or pull requests! We're open to add
 
 ---
 
-## License
+## PDF Sample Image
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+[![Captura-de-tela-2024-10-26-222935.png](https://i.postimg.cc/k41zMRDC/Captura-de-tela-2024-10-26-222935.png)](https://postimg.cc/N9XppM1C)
 
 ---
 
