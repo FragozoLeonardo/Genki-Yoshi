@@ -4,7 +4,7 @@
 
 ## Features
 
-- **Kanji Sheets**: Generate _原稿用紙_ with kanji and kana pre-filled in each cell.
+- **Kanji Sheets**: Generate 原稿用紙 sheets with kanji and kana pre-filled in each cell.
 - **Blank Kanji Sheets**: Generate only the blank grid, allowing freehand writing practice.
 - **Custom Sizes (Coming Soon)**: Currently supports A4 paper size. More paper sizes are on the way.
 
