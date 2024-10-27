@@ -1,7 +1,7 @@
 require 'prawn'
 
 def generate_genkoyoshi_pdf(file_name, input_kanji_kana)
-  Prawn::Document.generate(file_name, page_size: 'B5') do |pdf|
+  Prawn::Document.generate(file_name, page_size: 'A4') do |pdf|
     pdf.font_families.update("KanjiStrokeOrders" => {
       normal: "KanjiStrokeOrders.ttf"
     })
