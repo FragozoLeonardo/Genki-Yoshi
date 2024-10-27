@@ -103,7 +103,7 @@ This will generate a blank A4-sized _原稿用紙_ for manual writing.
 
 ## Credits
 
-[Nihilist.org.uk creator](https://www.nihilist.org.uk/)
+[Nihilist.org.uk creator.](https://www.nihilist.org.uk/) - For the font.
 
 ## Contributing
 
