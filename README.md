@@ -1,5 +1,3 @@
-No problem! Here's the updated README with the step for installing the `prawn` gem, which is used to generate the PDF files for the _原稿用紙_.
-
 ---
 
 # GenkiYoshi
