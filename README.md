@@ -18,6 +18,7 @@
 3. [Contributing](#contributing)
 4. [Credits](#credits)
 5. [Coming Soon](#coming-soon)
+6. [PDF Sample Image](#pdf-sample-image)
 
 ---
 
@@ -123,4 +124,4 @@ Feel free to contribute by submitting issues or pull requests! We're open to add
 
 ---
 
-Happy writing with **GenkiYoshi**!
+Happy writing with **GenkiYoshi**! 😊
