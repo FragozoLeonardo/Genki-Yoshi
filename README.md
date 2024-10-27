@@ -1,6 +1,6 @@
 # GenkiYoshi
 
-**GenkiYoshi** is a Ruby program to generate _原稿用紙_ (Japanese manuscript paper) in two different "flavors": one with pre-filled kanji and kana, and another with just the blank grid. This tool is great for practicing Japanese writing, whether it's kanji, kana, or mixed text.
+**GenkiYoshi** is a Ruby program to generate _原稿用紙_ (Japanese manuscript paper) in two different "flavors": one with to-be-filled kanji and/or kana, and another with just the blank grid. This tool is great for practicing Japanese writing, whether it's kanji, kana, or mixed text.
 
 ## Features
 
@@ -44,16 +44,24 @@ If you don't have Ruby installed on your system, follow the instructions below f
    sudo apt install ruby-full
    ```
 
-### Step 2: Clone the GenkiYoshi repository
+### Step 2: Install Prawn Gem
+
+GenkiYoshi uses the `prawn` gem to generate PDFs. Install the gem by running the following command:
+
+```bash
+gem install prawn
+```
+
+### Step 3: Clone the GenkiYoshi repository
 
 1. Open a terminal and run the following command to clone the project:
    ```bash
-   git clone https://github.com/FragozoLeonardo/GenkiYoshi.git
+   git clone https://github.com/yourusername/Genki-Yoshi.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd GenkiYoshi
+   cd Genki-Yoshi
    ```
 
 ---
@@ -93,6 +101,10 @@ This will generate a blank A4-sized _原稿用紙_ for manual writing.
 
 ---
 
+## Credits
+
+[Nihilist.org.uk creator.](https://www.nihilist.org.uk/) - For the font.
+
 ## Contributing
 
 Feel free to contribute by submitting issues or pull requests! We're open to adding more features, improving performance, or expanding the paper size options.
@@ -100,12 +112,13 @@ Feel free to contribute by submitting issues or pull requests! We're open to add
 ### Coming Soon
 - Additional paper sizes (B5, A5, and more).
 - Support for customizing the number of cells.
+- Rspec tests in order to assegurate the application is working as intended.
 
 ---
 
-## License
+## PDF Sample Image
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+[![Captura-de-tela-2024-10-26-222935.png](https://i.postimg.cc/k41zMRDC/Captura-de-tela-2024-10-26-222935.png)](https://postimg.cc/N9XppM1C)
 
 ---
 
