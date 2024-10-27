@@ -1,10 +1,10 @@
 # GenkiYoshi
 
-**GenkiYoshi** is a Ruby program to generate _原稿用紙_ (Japanese manuscript paper) in two different "flavors": one with to-be-filled kanji and/or kana, and another with just the blank grid. This tool is great for practicing Japanese writing, whether it's kanji, kana, or mixed text.
+**GenkiYoshi** is a Ruby program to generate 原稿用紙 sheet(s) (Japanese manuscript paper) in two different "flavors": one with to-be-filled kanji and/or kana, and another with just the blank grid. This tool is great for practicing Japanese writing, whether it's kanji, kana, or mixed text.
 
 ## Features
 
-- **Kanji Sheets**: Generate 原稿用紙 sheets with kanji and kana pre-filled in each cell.
+- **Kanji Sheets**: Generate 原稿用紙 sheet(s) with kanji and kana pre-filled in each cell.
 - **Blank Kanji Sheets**: Generate only the blank grid, allowing freehand writing practice.
 - **Custom Sizes (Coming Soon)**: Currently supports A4 paper size. More paper sizes are on the way.
 
@@ -70,11 +70,11 @@ gem install prawn
 
 ## Usage
 
-Once Ruby is installed and the repository is cloned, you can start generating your _原稿用紙_ sheets.
+Once Ruby is installed and the repository is cloned, you can start generating your 原稿用紙 sheet(s).
 
 ### Kanji Sheets
 
-To generate a _原稿用紙_ filled with kanji and kana characters:
+To generate a 原稿用紙 sheet(s) filled with kanji and kana characters:
 
 1. Open the `kanji_sheets.rb` file.
 2. In the file, you will see an `input_kanji_kana` array. This is where you will input the characters you want to appear on the sheet:
@@ -87,7 +87,7 @@ input_kanji_kana = %w[日本語学習]
    ruby kanji_sheets.rb
    ```
 
-This will generate an A4-size _原稿用紙_ with the characters you specified in each cell.
+This will generate an A4-size 原稿用紙 sheet(s) with the characters you specified in each cell.
 
 ### Blank Kanji Sheets
 
@@ -99,7 +99,7 @@ If you want to generate a blank grid for freehand practice:
    ruby kanji_sheets_blank.rb
    ```
 
-This will generate a blank A4-sized _原稿用紙_ for manual writing.
+This will generate a blank A4-sized 原稿用紙 sheet(s) for manual writing.
 
 ---
 
