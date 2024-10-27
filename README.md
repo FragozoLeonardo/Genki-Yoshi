@@ -1,6 +1,6 @@
 # GenkiYoshi
 
-**GenkiYoshi** is a Ruby program to generate _原稿用紙_ (Japanese manuscript paper) in two different "flavors": one with pre-filled kanji and kana, and another with just the blank grid. This tool is great for practicing Japanese writing, whether it's kanji, kana, or mixed text.
+**GenkiYoshi** is a Ruby program to generate _原稿用紙_ (Japanese manuscript paper) in two different "flavors": one with to-be-filled kanji and/or kana, and another with just the blank grid. This tool is great for practicing Japanese writing, whether it's kanji, kana, or mixed text.
 
 ## Features
 
