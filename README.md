@@ -56,7 +56,7 @@ gem install prawn
 
 1. Open a terminal and run the following command to clone the project:
    ```bash
-   git clone https://github.com/yourusername/Genki-Yoshi.git
+   git clone https://github.com/FragozoLeonardo/Genki-Yoshi.git
    ```
 
 2. Navigate to the project directory:
