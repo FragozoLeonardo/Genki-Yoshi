@@ -17,6 +17,7 @@
    - [Blank Kanji Sheets](#blank-kanji-sheets)
 3. [Contributing](#contributing)
 4. [Credits](#credits)
+5. [Coming Soon](#coming-soon)
 
 ---
 
