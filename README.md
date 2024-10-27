@@ -16,7 +16,7 @@
    - [Kanji Sheets](#kanji-sheets)
    - [Blank Kanji Sheets](#blank-kanji-sheets)
 3. [Contributing](#contributing)
-4. [License](#license)
+4. [Credits](#credits)
 
 ---
 
@@ -77,7 +77,7 @@ To generate a _原稿用紙_ filled with kanji and kana characters:
 1. Open the `kanji_sheets.rb` file.
 2. In the file, you will see an `input_kanji_kana` array. This is where you will input the characters you want to appear on the sheet:
    ```ruby
-   input_kanji_kana = ["日", "本", "語", "学", "習"]
+input_kanji_kana = %w[日本語学習]
    ```
 
 3. Run the script in your terminal:
