@@ -48,12 +48,12 @@ If you don't have Ruby installed on your system, follow the instructions below f
 
 1. Open a terminal and run the following command to clone the project:
    ```bash
-   git clone https://github.com/FragozoLeonardo/GenkiYoshi.git
+   git clone https://github.com/FragozoLeonardo/Genki-Yoshi.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd GenkiYoshi
+   cd Genki-Yoshi
    ```
 
 ---
