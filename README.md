@@ -112,7 +112,7 @@ This will generate a blank A4-sized 原稿用紙 sheet(s) for manual writing.
 ---
 
 ## Credits
-[Nihilist.org.uk creator.](https://www.nihilist.org.uk/) - For the font.
+[Nihilist.org.uk creator.](https://www.nihilist.org.uk/) - For the strokes order font.
 
 ## Contributing
 Feel free to contribute by submitting issues or pull requests! We're open to adding more features, improving performance, or expanding the paper size options.
