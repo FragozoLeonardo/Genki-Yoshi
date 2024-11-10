@@ -1,7 +1,30 @@
 require 'prawn'
+require 'pdf-reader'
 
-def generate_genkoyoshi_pdf(file_name, input_kanji_kana)
-  Prawn::Document.generate(file_name, page_size: 'A4', margin: [25, 25, 25, 25]) do |pdf|
+def convert_pdf_to_images(pdf_path, output_dir)
+  FileUtils.mkdir_p(output_dir)
+  base_name = File.basename(pdf_path, '.pdf')
+  output_pattern = File.join(output_dir, "#{base_name}-%d.png")
+  
+  system("pdftocairo -png -r 300 #{pdf_path} #{File.join(output_dir, base_name)}")
+  
+  Dir[File.join(output_dir, "#{base_name}-*.png")]
+end
+
+def images_to_pdf(image_paths, output_pdf)
+  Prawn::Document.generate(output_pdf, page_size: 'A4', margin: 0) do |pdf|
+    image_paths.sort.each_with_index do |image_path, index|
+      pdf.start_new_page if index > 0
+      pdf.image image_path, at: [0, pdf.bounds.height], width: pdf.bounds.width
+    end
+  end
+  output_pdf
+end
+
+def generate_genkoyoshi_pdf(file_name, input_kanji_kana, convert_to_image: true)
+  pdf_path = file_name
+  
+  Prawn::Document.generate(pdf_path, page_size: 'A4', margin: [25, 25, 25, 25]) do |pdf|
     pdf.font_families.update("KanjiStrokeOrders" => {
       normal: { file: "KanjiStrokeOrders.ttf", font: "KanjiStrokeOrders", embed: true }
     })
@@ -12,23 +35,19 @@ def generate_genkoyoshi_pdf(file_name, input_kanji_kana)
 
     pdf.font("NotoSansJP-Light")
     pdf.font_size 11
-
     pdf.move_down 10
-
     pdf.font("KanjiStrokeOrders")
     pdf.font_size 48
 
     rows = 15
     cols = 10
     cell_size = (pdf.bounds.width - 50) / cols
-
     input_index = 0
     kanji_kana_size = input_kanji_kana.length
 
     def draw_char(pdf, char, top_left, cell_size, color, is_small = false)
       pdf.fill_color color
       size = is_small ? 24 : 48
-      
       text_width = pdf.width_of(char, size: size)
       if is_small
         subgrid_center_x = top_left[0] + (cell_size / 4)
@@ -38,14 +57,12 @@ def generate_genkoyoshi_pdf(file_name, input_kanji_kana)
         text_x = top_left[0] + (cell_size - text_width) / 2
         text_y = top_left[1] - (cell_size * 0.80)
       end
-      
       pdf.draw_text char, at: [text_x, text_y], size: size
     end
 
     while input_index < kanji_kana_size
       (1..rows).each do |row|
         break if input_index >= kanji_kana_size
-
         current_char = input_kanji_kana[input_index]
         is_youon_start = current_char.match?(/[きぎしじちぢにひびぴみりキギシジチヂニヒビピミリ]/)
         next_char = input_index + 1 < kanji_kana_size ? input_kanji_kana[input_index + 1] : nil
@@ -90,6 +107,16 @@ def generate_genkoyoshi_pdf(file_name, input_kanji_kana)
       end
     end
   end
+
+  if convert_to_image
+    output_dir = File.dirname(pdf_path)
+    image_paths = convert_pdf_to_images(pdf_path, output_dir)
+    final_pdf = pdf_path.sub('.pdf', '_final.pdf')
+    images_to_pdf(image_paths, final_pdf)
+    return final_pdf
+  end
+  
+  return pdf_path
 end
 
 youon_hiragana = [["き", "ゃ"], ["き", "ゅ"], ["き", "ょ"], ["ぎ", "ゃ"], ["ぎ", "ゅ"], ["ぎ", "ょ"],  ["し", "ゃ"], ["し", "ゅ"], ["し", "ょ"], ["じ", "ゃ"], ["じ", "ゅ"], ["じ", "ょ"], ["ち", "ゃ"], ["ち", "ゅ"], ["ち", "ょ"], ["ぢ", "ゃ"], ["ぢ", "ゅ"], ["ぢ", "ょ"], ["に", "ゃ"], ["に", "ゅ"], ["に", "ょ"], ["ひ", "ゃ"], ["ひ", "ゅ"], ["ひ", "ょ"],  ["び", "ゃ"], ["び", "ゅ"], ["び", "ょ"], ["ぴ", "ゃ"], ["ぴ", "ゅ"], ["ぴ", "ょ"],  ["み", "ゃ"], ["み", "ゅ"], ["み", "ょ"], ["り", "ゃ"], ["り", "ゅ"], ["り", "ょ"]].flatten
@@ -102,4 +129,4 @@ kanji = %w[日月火水木金土曜一二三四五六七八九十百千万半数
 
 input_kanji_kana = (basic_kana + youon_hiragana + youon_katakana + kanji).map(&:chars).flatten
 
-generate_genkoyoshi_pdf("genkoyoshi_kanji_primeira_coluna.pdf", input_kanji_kana)
+generate_genkoyoshi_pdf("genkoyoshi_Leo.pdf", input_kanji_kana, convert_to_image: true)
