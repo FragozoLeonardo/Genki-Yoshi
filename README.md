@@ -2,6 +2,8 @@
 
 **GenkiYoshi** is a Ruby program to generate 原稿用紙 sheet(s) (Japanese manuscript paper) in two different "flavors": one with to-be-filled kanji and/or kana, and another with just the blank grid. This tool is great for practicing Japanese writing, whether it's kanji, kana, or mixed text.
 
+[![Captura-de-tela-2024-11-10-111031.png](https://i.postimg.cc/rFsXvFXz/Captura-de-tela-2024-11-10-111031.png)](https://postimg.cc/w3CGNzBd)
+
 ## Features
 - **Character Sheets**: Generate 原稿用紙 sheet(s) with kana and kanji pre-filled in each cell.
 - **Blank Character Sheets**: Generate only the blank grid, allowing freehand writing practice.
@@ -11,20 +13,13 @@
 
 ## Table of Contents
 
-1. [PDF Sample Image](#pdf-sample-image)
-2. [Installation](#installation)
-3. [Usage](#usage)
+1. [Installation](#installation)
+2. [Usage](#usage)
    - [Character Sheets](#kanji-sheets)
    - [Blank Character Sheets](#blank-kanji-sheets)
-4. [Contributing](#contributing)
-5. [Credits](#credits)
-6. [Coming Soon](#coming-soon)
-
----
-
-## PDF Sample Image
-
-[![Captura-de-tela-2024-11-10-111031.png](https://i.postimg.cc/rFsXvFXz/Captura-de-tela-2024-11-10-111031.png)](https://postimg.cc/w3CGNzBd)
+3. [Contributing](#contributing)
+4. [Credits](#credits)
+5. [Coming Soon](#coming-soon)
 
 ---
 
