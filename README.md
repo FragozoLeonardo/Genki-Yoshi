@@ -3,8 +3,8 @@
 **GenkiYoshi** is a Ruby program to generate 原稿用紙 sheet(s) (Japanese manuscript paper) in two different "flavors": one with to-be-filled kanji and/or kana, and another with just the blank grid. This tool is great for practicing Japanese writing, whether it's kanji, kana, or mixed text.
 
 ## Features
-- **Character Sheets**: Generate 原稿用紙 sheet(s) with kanji and kana pre-filled in each cell.
-- **Blank Kanji Sheets**: Generate only the blank grid, allowing freehand writing practice.
+- **Character Sheets**: Generate 原稿用紙 sheet(s) with kana and kanji pre-filled in each cell.
+- **Blank Character Sheets**: Generate only the blank grid, allowing freehand writing practice.
 - **Custom Sizes (Coming Soon)**: Currently supports A4 paper size. More paper sizes are on the way.
 
 ---
@@ -12,8 +12,8 @@
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
-   - [Kanji Sheets](#kanji-sheets)
-   - [Blank Kanji Sheets](#blank-kanji-sheets)
+   - [Character Sheets](#kanji-sheets)
+   - [Blank Character Sheets](#blank-kanji-sheets)
 3. [Contributing](#contributing)
 4. [Credits](#credits)
 5. [Coming Soon](#coming-soon)
@@ -85,7 +85,7 @@ brew install poppler
 ## Usage
 Once Ruby is installed and the repository is cloned, you can start generating your 原稿用紙 sheet(s).
 
-### Kanji Sheets
+### Character Sheets
 To generate a 原稿用紙 sheet(s) filled with kanji and kana characters:
 1. Open the `kanji_sheets.rb` file.
 2. In the file, you will see an `input_kanji_kana` array. This is where you will input the characters you want to appear on the sheet:
@@ -98,7 +98,7 @@ To generate a 原稿用紙 sheet(s) filled with kanji and kana characters:
    ```
 This will generate an A4-size 原稿用紙 sheet(s) with the characters you specified in each cell.
 
-### Blank Kanji Sheets
+### Blank Character Sheets
 If you want to generate a blank grid for freehand practice:
 1. Open the `kanji_sheets_blank.rb` file.
 2. Simply run the script:
