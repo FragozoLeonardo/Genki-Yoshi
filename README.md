@@ -95,7 +95,7 @@ Once Ruby is installed and the repository is cloned, you can start generating yo
 ### Character Sheets
 To generate a 原稿用紙 sheet(s) filled with kanji and kana characters:
 1. Open the `kanji_sheets.rb` file.
-2. In the file, you will see an `input_kanji_kana` array. This is where you will input the characters you want to appear on the sheet:
+2. In the file, you will see some arrays. This is where you will input the characters you want to appear on the sheet:
    ```ruby
    input_kanji_kana = %w[日本語学習]
    ```
