@@ -1,5 +1,6 @@
 require 'prawn'
 require 'pdf-reader'
+require 'fileutils'
 
 def convert_pdf_to_images(pdf_path, output_dir)
   FileUtils.mkdir_p(output_dir)
@@ -17,6 +18,13 @@ def images_to_pdf(image_paths, output_pdf)
     end
   end
   output_pdf
+end
+
+def cleanup_temporary_files(image_paths, original_pdf)
+  image_paths.each do |image_path|
+    File.delete(image_path) if File.exist?(image_path)
+  end
+  File.delete(original_pdf) if File.exist?(original_pdf)
 end
 
 def draw_char(pdf, char, top_left, cell_size, color, is_small = false)
@@ -118,6 +126,7 @@ def generate_genkoyoshi_pdf(file_name, hiragana, katakana, kanji, convert_to_ima
     image_paths = convert_pdf_to_images(pdf_path, output_dir)
     final_pdf = pdf_path.sub('.pdf', '_final.pdf')
     images_to_pdf(image_paths, final_pdf)
+    cleanup_temporary_files(image_paths, pdf_path)
     return final_pdf
   end
   
@@ -129,11 +138,13 @@ youon_hiragana = [["き", "ゃ"], ["き", "ゅ"], ["き", "ょ"], ["ぎ", "ゃ"]
 youon_katakana = [["キ", "ャ"], ["キ", "ュ"], ["キ", "ョ"], ["ギ", "ャ"], ["ギ", "ュ"], ["ギ", "ョ"], ["シ", "ャ"], ["シ", "ュ"], ["シ", "ョ"], ["ジ", "ャ"], ["ジ", "ュ"], ["ジ", "ョ"], ["チ", "ャ"], ["チ", "ュ"], ["チ", "ョ"], ["ヂ", "ャ"], ["ヂ", "ュ"], ["ヂ", "ョ"], ["ニ", "ャ"], ["ニ", "ュ"], ["ニ", "ョ"], ["ヒ", "ャ"], ["ヒ", "ュ"], ["ヒ", "ョ"], ["ビ", "ャ"], ["ビ", "ュ"], ["ビ", "ョ"], ["ピ", "ャ"], ["ピ", "ュ"], ["ピ", "ョ"], ["ミ", "ャ"], ["ミ", "ュ"], ["ミ", "ョ"], ["リ", "ャ"], ["リ", "ュ"], ["リ", "ョ"]].flatten
 
 basic_hiragana = %w[あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわゐゑをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽ]
+
 basic_katakana = %w[アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヰヱヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ]
+
 kanji = %w[日月火水木金土曜一二三四五六七八九十百千万半数円分時週年今初始終何回台度代点番倍上下右左前後午以所中間横東西南北山川池海田野林森地島洋世界図形表大小多少高安低広太早近遠新古良悪私父母子兄弟姉妹親族男女夫妻主奥人者友民員達朝昼夕夜晩毎先次予定立歩走登止駐入出去起寝乗降忙急座泳泣家校窓門館室部屋堂院工場店社駅寺庭園行来帰発着送通進運落食飲肉茶油酒菜飯料理味切目口耳鼻顔頭首手足体力元気病生死薬医休言話申交見聞読書知忘使調計自転車船動具電品荷物紙服有名便利不同長短強弱重軽速遅開閉押引拾捨持洗作取国際特京都道府県市区町村内外合別住働売買借貸待集産建合遊禁失正神祭化本映画旅写真歌絵心好苦楽春夏秋冬天空星雨]
 
 all_hiragana = (basic_hiragana + youon_hiragana).map(&:chars).flatten
 all_katakana = (basic_katakana + youon_katakana).map(&:chars).flatten
 all_kanji = kanji.map(&:chars).flatten
 
-generate_genkoyoshi_pdf("genkoyoshi_Leo.pdf", all_hiragana, all_katakana, all_kanji, convert_to_image: true)
+generate_genkoyoshi_pdf("generated_genkoyoshi.pdf", all_hiragana, all_katakana, all_kanji, convert_to_image: true)
