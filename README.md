@@ -10,14 +10,21 @@
 ---
 
 ## Table of Contents
-1. [Installation](#installation)
-2. [Usage](#usage)
+
+1.[PDF Sample Image](#pdf-sample-image)
+2. [Installation](#installation)
+4. [Usage](#usage)
    - [Character Sheets](#kanji-sheets)
    - [Blank Character Sheets](#blank-kanji-sheets)
-3. [Contributing](#contributing)
-4. [Credits](#credits)
-5. [Coming Soon](#coming-soon)
-6. [PDF Sample Image](#pdf-sample-image)
+5. [Contributing](#contributing)
+6. [Credits](#credits)
+7. [Coming Soon](#coming-soon)
+
+---
+
+## PDF Sample Image
+
+[![Captura-de-tela-2024-11-10-111031.png](https://i.postimg.cc/rFsXvFXz/Captura-de-tela-2024-11-10-111031.png)](https://postimg.cc/w3CGNzBd)
 
 ---
 
@@ -121,12 +128,6 @@ Feel free to contribute by submitting issues or pull requests! We're open to add
 - Font options.
 - Support for customizing the number of cells.
 - Rspec tests in order to assegurate the application is working as intended.
-
----
-
-## PDF Sample Image
-
-[![Captura-de-tela-2024-11-10-111031.png](https://i.postimg.cc/rFsXvFXz/Captura-de-tela-2024-11-10-111031.png)](https://postimg.cc/w3CGNzBd)
 
 ---
 
