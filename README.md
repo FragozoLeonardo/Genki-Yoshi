@@ -11,14 +11,14 @@
 
 ## Table of Contents
 
-1.[PDF Sample Image](#pdf-sample-image)
+1. [PDF Sample Image](#pdf-sample-image)
 2. [Installation](#installation)
-4. [Usage](#usage)
+3. [Usage](#usage)
    - [Character Sheets](#kanji-sheets)
    - [Blank Character Sheets](#blank-kanji-sheets)
-5. [Contributing](#contributing)
-6. [Credits](#credits)
-7. [Coming Soon](#coming-soon)
+4. [Contributing](#contributing)
+5. [Credits](#credits)
+6. [Coming Soon](#coming-soon)
 
 ---
 
