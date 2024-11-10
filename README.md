@@ -116,7 +116,9 @@ This will generate a blank A4-sized 原稿用紙 sheet(s) for manual writing.
 Feel free to contribute by submitting issues or pull requests! We're open to adding more features, improving performance, or expanding the paper size options.
 
 ### Coming Soon
+
 - Additional paper sizes (B5, A5, and more).
+- Font options,
 - Support for customizing the number of cells.
 - Rspec tests in order to assegurate the application is working as intended.
 
