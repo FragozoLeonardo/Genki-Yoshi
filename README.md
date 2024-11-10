@@ -118,7 +118,7 @@ Feel free to contribute by submitting issues or pull requests! We're open to add
 ### Coming Soon
 
 - Additional paper sizes (B5, A5, and more).
-- Font options,
+- Font options.
 - Support for customizing the number of cells.
 - Rspec tests in order to assegurate the application is working as intended.
 
