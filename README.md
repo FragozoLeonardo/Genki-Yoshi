@@ -85,7 +85,7 @@ brew install poppler
 ## Usage
 Once Ruby is installed and the repository is cloned, you can start generating your 原稿用紙 sheet(s).
 
-[Here](https://youtu.be/UufPW4YT_UU) is a short YouTube tutorial on how use the CLI, the same holds true to the blank version, with the respective changes. 
+[Here](https://youtu.be/FeBbXmcPcR0) is a short YouTube tutorial on how use the CLI, the same holds true to the blank version, with the respective changes. 
 
 ## Credits
 [Nihilist.org.uk creator.](https://www.nihilist.org.uk/) - For the strokes order font.
