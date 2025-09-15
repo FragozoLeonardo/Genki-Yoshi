@@ -192,16 +192,11 @@ We welcome contributions! Please feel free to submit issues, feature requests, o
 
 ### Medium-term Goals
 - [ ] Web-based version with GUI
-- [ ] Character stroke order diagrams
 - [ ] Pre-defined character sets (JLPT levels, etc.)
-- [ ] Template system for different practice styles
 
 ### Long-term Vision
 - [ ] Mobile application
-- [ ] AI-powered handwriting correction
 - [ ] Progress tracking and analytics
-- [ ] Integration with language learning platforms
-
 ---
 
 Happy writing with **GenkiYoshi**! がんばって! 😊
